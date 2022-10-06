@@ -1,0 +1,23 @@
+I64 temp;
+I64 i = 0;
+I64 n1 = 0;
+I64 n2 = 1;
+I64 amount = 20;
+goto +2;
+"This line is skipped over, and will not be printed";
+"The first %d Fibonacci numbers are\n", (+ amount 1);
+label loop:
+goto even if (= (% n1 2) 0);
+goto five if (= 5 n1);
+"f%d is %d and is odd\n", i, n1;
+section even:
+"f%d is %d and is even\n", i, n1;
+section five:
+"f%d is five\n", i;
+continue;
+i += 1;
+temp = n2;
+n2 = (+ n2 n1);
+n1 = temp;
+goto loop if (<= i 20);
+
