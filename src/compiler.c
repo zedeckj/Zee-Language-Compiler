@@ -96,7 +96,7 @@ int is_operator(char ** tokens, int count) {
         offset = 1;
         if (count < 4 || !(is_variable(tokens[2]) || is_number(tokens[2]) || (tokens[2][0] == '(' && valid_expression(tokens + 2, count - 2)) ||  tokens[3][0] != '}')) return 0;
     }
-    char * ops[] = {"+", "-", "*", "/", "%", "=", "!=", "?", "<", ">", "<=", ">=", "&&", "||", "!", "^^", "->", "++", "--", "&", "|", "^", ">>", "<<", ">>>", "<<<"};
+    char * ops[] = {"+", "-", "*", "/", "%", "=", "!=", "?", "<", ">", "<=", ">=", "&&", "||", "!", "^^", "->", "++", "--", "&", "|", "^", ">>", "<<"};
     for (int i = 0; i < 26; i++) {
         if (streql(tokens[offset], ops[i])) return 1;
     }
@@ -105,7 +105,8 @@ int is_operator(char ** tokens, int count) {
 }
 
 int operator_min_args(char * op) {
-    if (streql(op,"?")) return 3;
+    if (streql(op, "!") || streql(op, "--") || streql(op, "++")) return 1;
+    else if (streql(op,"?")) return 3;
     return 2;
 }
 
@@ -1104,17 +1105,19 @@ void cmpl_operation(char * op_token, char * value) {
         cmpl_instruction("imulq", value, "%rax");
     }
     else if (streql(op_token, ">>")) {
-        cmpl_instruction("shrq", value, "%rax");
+        cmpl_instruction("sarq", value, "%rax");
     }
     else if (streql(op_token, "<<")) {
-        cmpl_instruction("shlq", value, "%rax");
+        cmpl_instruction("salq", value, "%rax");
     }
+/*
     else if (streql(op_token, ">>>")) {
         cmpl_instruction("sarq", value, "%rax");
     }
     else if (streql(op_token, "<<<")) {
         cmpl_instruction("salq", value, "%rax");
     }
+*/
     else if (streql(op_token, "&")) {
         cmpl_instruction("andq", value, "%rax");
     }
