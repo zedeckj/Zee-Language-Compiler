@@ -1,4 +1,4 @@
-# Zee-Language-Compiler
+# Zee Language Compiler
 The Zee language is an extremely basic compiled procedural language for Mac OSX. In its current state, there is one data type, no functions, and no scope. The language is intended as a toy rather than for practical aplications. Its compiler is written in C and is for x86-64 Assembly.
 
 # Syntax
@@ -123,8 +123,8 @@ label continue:
 # Building and Use
 
 Upon downloading, set the working directory to the path of the repository. Run the following to build the compiler and test the example program:
-```make```
-```./zeec fib.zee```
-```./fib```
+```make```  
+```./zeec fib.zee```  
+```./fib```   
 
 The -S flag can be added when running ```./zeec``` to save the generated Assembly files.
