@@ -97,7 +97,7 @@ int is_operator(char ** tokens, int count) {
         if (count < 4 || !(is_variable(tokens[2]) || is_number(tokens[2]) || (tokens[2][0] == '(' && valid_expression(tokens + 2, count - 2)) ||  tokens[3][0] != '}')) return 0;
     }
     char * ops[] = {"+", "-", "*", "/", "%", "=", "!=", "?", "<", ">", "<=", ">=", "&&", "||", "!", "^^", "->", "++", "--", "&", "|", "^", ">>", "<<"};
-    for (int i = 0; i < 26; i++) {
+    for (int i = 0; i < 24; i++) {
         if (streql(tokens[offset], ops[i])) return 1;
     }
 

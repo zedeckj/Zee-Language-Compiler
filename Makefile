@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = 
+CFLAGS = -w 
 prefix =
 LDFLAGS = 
 

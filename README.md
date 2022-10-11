@@ -1,21 +1,21 @@
 # Zee-Language-Compiler
-The Zee language is an extremely basic procedural language. In its current state, there is one data type, no functions, and no scope. The language is intended as a toy rather than for practical aplications. Its compilerd is written in C and is for x86-64 Assembly. 
+The Zee language is an extremely basic compiled procedural language for Mac OSX. In its current state, there is one data type, no functions, and no scope. The language is intended as a toy rather than for practical aplications. Its compiler is written in C and is for x86-64 Assembly.
 
 # Syntax
 The syntax of the Zee language is composed of two elements, instructions and expressions. Expressions evaluate to a single integer value, andcan either be an integer themselves or be composed of parenthesized pre-fixed operations of other expressions. Currently defined operations are:
 
-Unary Operations:
-++, --: Add/Subtract 1 from argument
-!: Logical not
+Unary Operations:  
+++, --: Add/Subtract 1 from argument  
+!: Logical not  
 
-Examples:
+Examples:  
 ```
 (++ 1) -> 2
 (! 0) -> 1
 (! 15) -> 0
 ```
-Binary Operations:
-=, !=, <, >, <=, >=: Comparison operations
+Binary Operations:  
+=, !=, <, >, <=, >=: Comparison operations  
 
 Examples:
 ```
@@ -24,7 +24,7 @@ Examples:
 (>= 100 2) -> 1
 ```
 Ternary Operations:
-?: C-style ternary
+?: C-style ternary  
 
 Examples:
 ```
@@ -33,11 +33,11 @@ Examples:
 ```
 
 Variable Argument Operations:
-+, -, /, *: Basic arithmetic operations
-%: Modulo 
-<<, >>: Arithmetic shift operations
-&, |, ^: Bitwise and, or, xor
-&&, ||, ^^, ->: Logical and, or, xor, material conditional 
++, -, /, *: Basic arithmetic operations  
+%: Modulo   
+<<, >>: Arithmetic shift operations  
+&, |, ^: Bitwise and, or, xor  
+&&, ||, ^^, ->: Logical and, or, xor, material conditional   
 
 Examples:
 ```
@@ -118,3 +118,13 @@ label two:
 label continue:
 “End Program\n”;
 ```
+
+
+# Building and Use
+
+Upon downloading, set the working directory to the path of the repository. Run the following to build the compiler and test the example program:
+```make```
+```./zeec fib.zee```
+```./fib```
+
+The -S flag can be added when running ```./zeec``` to save the generated Assembly files.
