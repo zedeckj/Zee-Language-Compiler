@@ -122,7 +122,7 @@ label continue:
 
 # Building and Use
 
-Upon downloading, set the working directory to the path of the repository. Run the following to build the compiler and test the example program:
+Upon downloading, set the working directory to the path of the repository. Run the following to build the compiler and test the example program:  
 ```make```  
 ```./zeec fib.zee```  
 ```./fib```   
