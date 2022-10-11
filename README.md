@@ -1,7 +1,7 @@
 # Zee-Language-Compiler
 The Zee language is an extremely basic procedural language. In its current state, there is one data type, no functions, and no scope. The language is intended as a toy rather than for practical aplications. Its compilerd is written in C and is for x86-64 Assembly. 
 
-#Syntax
+# Syntax
 The syntax of the Zee language is composed of two elements, instructions and expressions. Expressions evaluate to a single integer value, andcan either be an integer themselves or be composed of parenthesized pre-fixed operations of other expressions. Currently defined operations are:
 
 Unary Operations:
@@ -50,7 +50,7 @@ Examples:
 (&& 53 2) -> 1
 (|| 0 0) -> 0
 ```
-#Instructions
+# Instructions
 The core composition of Zee is instructions, which can modify state but do not return values. Currently defined instructions are:
 
 Decleration Instructions: Creates a new variable
