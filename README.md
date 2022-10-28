@@ -55,7 +55,7 @@ The core composition of Zee is instructions, which can modify state but do not r
 
 Decleration Instructions: Creates a new variable
 ```I64 <variable_name>; 
-I64 <variable_name> = (expression);
+I64 <variable_name> = (Expression);
 ```
 Assignment Instructions: Assigns or Modifies the value of an existing variable
 ```
