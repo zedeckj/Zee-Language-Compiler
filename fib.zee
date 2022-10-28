@@ -20,5 +20,3 @@ temp = n2;
 n2 = (+ n2 n1);
 n1 = temp;
 goto loop if (<= i 20);
-putn 2;
-"%d\n",(+ 2 2 3 (* 6 5 3 (- 3 2))); 
