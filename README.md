@@ -2,7 +2,7 @@
 The Zee language is an extremely basic compiled procedural language for Mac OSX. In its current state, there is one data type, no functions, and no scope. The language is intended as a toy rather than for practical aplications. Its compiler is written in C and is for x86-64 Assembly.
 
 # Syntax
-The syntax of the Zee language is composed of two elements, instructions and expressions. Expressions evaluate to a single integer value, andcan either be an integer themselves or be composed of parenthesized pre-fixed operations of other expressions. Currently defined operations are:
+The syntax of the Zee language is composed of two elements, instructions and expressions. Expressions evaluate to a single integer value, and can either be an integer themselves or be composed of parenthesized pre-fixed operations of other expressions. Currently defined operations are:
 
 Unary Operations:  
 ++, --: Add/Subtract 1 from argument  
