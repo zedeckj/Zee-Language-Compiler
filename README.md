@@ -30,6 +30,7 @@ Examples:
 ```
 (? 1 10 11) -> 10
 (? 0 5 50) -> 50
+(? (= 10 1) 10 (< 10 1)) -> 0
 ```
 
 Variable Argument Operations:
@@ -42,6 +43,7 @@ Variable Argument Operations:
 Examples:
 ```
 (+ 2 2) -> 4
+(- 20 (* 5 3) 4) -> 1
 (% 7 3) -> 1
 (<< 64 1) -> 128
 (>> -1 2) -> -1
@@ -50,6 +52,7 @@ Examples:
 (&& 53 2) -> 1
 (|| 0 0) -> 0
 ```
+
 # Instructions
 The core composition of Zee is instructions, which can modify state but do not return values. Currently defined instructions are:
 
