@@ -8,14 +8,6 @@
 
 char * keywords [] = {"set", "add", "mul", "div", "goto", "goto-if", "label", "putn", "printf", "I64"};
 
-/*
- * ALL WORK AND NO PLAY MAKES JORDAN A DULL BOY ALL WORK AND NO PLAY MAKES JORDAN A DULL BOY ALL WORK AND NO PLAY MAKES
- * JORDAN A DULL BOY ALL WORK AND NO PLAY MAKES JORDAN A DULL BOY ALL WORK AND NO PLAY MAKES JORDAN A DULL BOY
- *
- *
- *
- */
-
 void linearize(char ** tokens, int token_count, struct line * lines, int * line_count, int * locations) {
     int l = 0;
     *line_count = 0;
