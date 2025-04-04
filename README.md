@@ -1,7 +1,7 @@
 # Zee Language Compiler
 Zee is a simple procedural language I designed to learn about compiler implementation. There is one data type, no functions, and no scope. The language is intended as a toy rather than for practical aplications. The compiler itself is written in C and tagets x86-64 Assembly. 
 
-I'll note this project is years old now, and since its creation I've learned a lot about compilers and language design. I'm sure there's plenty of mistakes 
+I'll note this project is years old now, and since its creation I've learned a lot about compilers and language design. I'm sure there's plenty of mistakes in the implementation. 
 
 # Syntax
 The syntax of Zee is composed of two elements, instructions and expressions. Expressions evaluate to a single integer value, and can either be an integer themselves or be composed of parenthesized pre-fixed operations on other expressions. Currently defined operations are:
